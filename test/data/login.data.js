@@ -1,4 +1,6 @@
 module.exports={
     userName:'tomsmith',
-    password: 'SuperSecretPassword!'
+    password: 'SuperSecretPassword!',
+    user:"Shubham"
+    
 }
