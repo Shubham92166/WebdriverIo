@@ -1,18 +1,14 @@
-class Browser {
-    switchToTab(title){
-        var allWindowHandles = browser.getWindowHandles()
-        var currentWindow = browser.getWindowHandle()
-        for(var i in allWindowHandles)
-        {
-            browser.switchToWindow(allWindowHandles[i])
-            if(browser.getTitle().includes(title)){
-                break
-            }
-            else{
-                browser.switchToWindow(currentWindow)
-            }
-        }
+switchToWindowContaining = (title) => {
+    let AllWindwoHandles = browser.getWindowHandles()
+    let currentWindowHandle = browser.getWindowHandle();
+    for (let handle of handles){
+        browser.switchToWindow(handle)
+        if(browser.getTitle().includes(title)) return;
     }
+    browser.switchToWindow(currentWindowHandle);
+    return ;
 }
 
-module.exports = new Browser();
+module.exports = {
+    switchToWindowContaining
+}
