@@ -1,7 +1,7 @@
 
 const util=require('../Utilities/browser.util')
 const element=require('../Utilities/Element.util')
-const productone=require('../Elements/ProductElements')
+const productone=require('../Elements/Product')
 
 
 class product{
