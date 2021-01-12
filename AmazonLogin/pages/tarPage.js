@@ -1,5 +1,5 @@
-//nst { select } = require('../Elements/landingElements')
-const selectElements= require('../Elements/landingElements')
+//nst { select } = require('../Elements/elements')
+const selectElements= require('../Elements/elements')
 const dataval=require('../Data/data');
 
 class landingPage{
