@@ -1,19 +1,20 @@
 const tripLoginElements = require('../elements/tripLogin.elements')
 const browserUtil = require('../../utilities/browser.util')
+const tripLoginData = require('../data/tripLogin.data')
 
 class tripLoginPage{
 
     flightBooking(){
         tripLoginElements.fromBox.click()
-        tripLoginElements.from.setValue(tripLoginElements.fromText)
+        tripLoginElements.from.setValue(tripLoginData.fromText)
         tripLoginElements.fromLocation.click()
         tripLoginElements.toBox.click()
-        tripLoginElements.to.setValue(tripLoginElements.toText)
+        tripLoginElements.to.setValue(tripLoginData.toText)
         tripLoginElements.toLocation.click()
         browser.pause(2000)
         tripLoginElements.departureDate.click()
         tripLoginElements.searchButton.click()
-        if(tripLoginElements.flightDetailsButton.getText()===tripLoginElements.flightDetailsText && tripLoginElements.viewPrices.getText()===tripLoginElements.viewPricesText)
+        if(tripLoginElements.flightDetailsButton.getText()===tripLoginData.flightDetailsText && tripLoginElements.viewPrices.getText()===tripLoginData.viewPricesText)
         {
             tripLoginElements.viewPrices.click()
            // tripLoginElements.lowFareBooknowButton.scrollIntoView()
@@ -30,7 +31,7 @@ class tripLoginPage{
             }
             
             //browserUtil.switchToWindowContaining(tripLoginElements.title)
-            if(tripLoginElements.reviewYourBooking.getText().includes(tripLoginElements.reviewYourBookingText))
+            if(tripLoginElements.reviewYourBooking.getText().includes(tripLoginData.reviewYourBookingText))
             return true
         }
         else{
