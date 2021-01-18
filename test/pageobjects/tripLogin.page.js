@@ -1,6 +1,8 @@
+
 const tripLoginElements = require('../elements/tripLogin.elements')
 const browserUtil = require('../../utilities/browser.util')
 const tripLoginData = require('../data/tripLogin.data')
+
 const data =require('../data/tripLogin.data');
 //const { EmailID } = require('../elements/tripLogin.elements');
 const loginelem=require('../elements/tripLogin.elements')
@@ -32,6 +34,7 @@ class tripLoginPage{
    
 
    
+
 
     flightBooking(){
         tripLoginElements.fromBox.click()
@@ -68,6 +71,7 @@ class tripLoginPage{
         }
 
     }
+
 
 }
 module.exports=new tripLoginPage(); 
