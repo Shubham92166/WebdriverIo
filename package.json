@@ -1,7 +1,6 @@
 {
   "name": "tcs",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "wdio wdio.conf.js"
@@ -19,7 +18,20 @@
     "chromedriver": "^87.0.4",
     "wdio-chromedriver-service": "^6.0.4"
   },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shubham92166/WebdriverIo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Shubham92166/WebdriverIo/issues"
+  },
+  "homepage": "https://github.com/Shubham92166/WebdriverIo#readme",
+  "description": "",
   "dependencies": {
-    "webdriverio": "^6.11.3"
+    "local-runner": "^0.1.1-alpha",
+    "webdriverio": "^6.10.11"
   }
 }
