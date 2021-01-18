@@ -1,4 +1,26 @@
 class tripLoginElements{
-    
+
+
+    fromText = 'Bangalore'
+    toText = 'Hyderabad'
+    viewPricesText = 'VIEW PRICES'
+    flightDetailsText = 'Flight Details'
+    title = 'Makemytrip'
+    reviewYourBookingText = 'Review your booking'
+
+    get fromBox () {return $('.fsw_inputBox.searchCity.inactiveWidget')}
+    get toBox () {return $('//label[@for="toCity"]')}
+    get from () {return $('//input[@placeholder="From"]')}
+    get to () {return $('//input[@placeholder="To"]')}
+    get fromLocation () {return $('//p[text()="Kempegowda International Airport"]')}
+    get toLocation () {return $('//p[text()="Rajiv Gandhi Intl Airport"]')}
+    get departure () {return $('//label[@for="departure"]')}
+    get departureDate () {return $('//div[@class="DayPicker-Month"][1]//p[text()="22"]')}
+    get searchButton () {return $('//a[text()="Search"]')}
+    get flightDetailsButton () {return $('(//div[contains(@id,"fli_list_item_")][1]/..//span[text()="Flight Details"])[1]')}
+    get cancellationButton() {return $('(//div[@id="flightDetailsTab-0"][1]/..//a[text()="CANCELLATION"][1])')}
+    get viewPrices () {return $('(//div[contains(@id,"fli_list_item_")][1]/..//button[contains(@id,"bookbutton-RKEY:")])[1]')}
+    get lowFareBooknowButton () {return $('(//div[contains(@id,"fli_list_item")][1]//button[text()="Book Now"][1])[1]')}
+    get reviewYourBooking () {return $('//div//h4[text()="Review your booking"]')}
 }
 module.exports=new tripLoginElements();

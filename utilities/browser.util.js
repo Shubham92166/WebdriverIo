@@ -1,7 +1,7 @@
 switchToWindowContaining = (title) => {
-    let AllWindwoHandles = browser.getWindowHandles()
+    let AllWindowHandles = browser.getWindowHandles()
     let currentWindowHandle = browser.getWindowHandle();
-    for (let handle of handles){
+    for (let handle of AllWindowHandles){
         browser.switchToWindow(handle)
         if(browser.getTitle().includes(title)) return;
     }
