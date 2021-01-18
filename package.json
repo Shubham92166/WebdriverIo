@@ -18,5 +18,8 @@
     "chai-webdriverio": "^1.0.0",
     "chromedriver": "^87.0.4",
     "wdio-chromedriver-service": "^6.0.4"
+  },
+  "dependencies": {
+    "webdriverio": "^6.11.3"
   }
 }
