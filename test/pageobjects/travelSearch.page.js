@@ -1,8 +1,14 @@
 const searchElements=require('../elements/travelSearch.elements');
 const {expect}=require("chai");
+//const { login } = require('../pageobjects/tripLogin.page');
 //@Author:Shubham 
 class travelSearchPage{
     searchFlight(){
+        //elem=$('//div[@data-cy="outsideModal"]');
+        //if(elem.isDisplayed()){
+        //login();
+
+    //}
         searchElements.searchButton.click();
     }
     sortingFlights(){
