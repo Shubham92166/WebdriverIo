@@ -2,13 +2,13 @@ module.exports={
 
     userName:'',
     password: '',
-    user: ' ',
+    user: '',
     fromText: 'Bangalore',
     toText: 'Hyderabad',
     viewPricesText: 'VIEW PRICES',
     flightDetailsText: 'Flight Details',
     title: 'Makemytrip',
-    reviewYourBookingText: 'Review your booking',
+    reviewYourBookingText:'Review your booking',
 
     username:'kavyatesting10@gmail.com',
     password: 'Pass@123',
@@ -18,4 +18,3 @@ module.exports={
     toDestination: 'Delhi',
     departureDate: '30'
    
-}

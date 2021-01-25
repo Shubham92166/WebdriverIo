@@ -30,9 +30,9 @@ class tripLoginPage{
     
        loginelem.loginBtn.click();
        //browser.clearElement(loginelem.EmailID);
-       loginelem.EmailID.setValue(data.username);
+       loginelem.EmailID.setValue(data.Email);
        loginelem.continue.click();
-       loginelem.password.setValue(data.password);
+       loginelem.password.setValue(data.Password);
        loginelem.login.click();
    }
 
