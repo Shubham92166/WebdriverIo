@@ -3,7 +3,7 @@ const filterPage=require('../pageobjects/travelFilter.page');
 const { allFlight } = require('../pageobjects/travelSearch.page');
 const {expect}=require("chai");
 describe("Flight Booking", function(){
-it("Searching flight", function(){
+it.skip("Searching flight", function(){
     browser.url('/');
     elem=$('//div[@data-cy="outsideModal"]');
     if(elem.isDisplayed()){
