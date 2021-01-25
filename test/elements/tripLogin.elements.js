@@ -26,17 +26,16 @@ class tripLoginElements{
     get error() { return $('//p[@class="validity font12 redText appendTop5 makeFlex"]')}
 
 
-    fromDestination = 'Mumbai'
-    toDestination = 'Delhi'
-    departureDate = '30'
-
-    get fromcity() {return $ ('#fromCity')}
+    get frominputbox(){return $ ('.fsw_inputBox.searchToCity.inactiveWidget')}
+    get fromcity() {return $ ('//input[@placeholder="From"]')}
     get tocity() {return $('//input[@placeholder="To"]')}
-    get fromLocation() {return $('//p[text()="Chhatrapati Shivaji International Airport"]')}
-    get toLocation() {return $('//p[text()="Delhi Airport"]')}
+    get fromPlace() {return $('//p[text()="Chhatrapati Shivaji International Airport"]')}
+    get fromcityinput() {return $('//p[@class="font14.appendBottom5.blackText][1]')}
+    get toPlace() {return $('//p[text()="Delhi Airport"]')}
+    get tocityinput() {return $('//div[@class="makeFlex.hrtlCenter"][3]')}
     get setdate() {return $ ('//p[text()="30"]')}
-    get searchButton() {return $ ('//a[text()="Search"]')}
-
+    get search() {return $ ('//a[text()="Search"]')}
+    
     
 
 }

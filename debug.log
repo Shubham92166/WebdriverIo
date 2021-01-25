@@ -7,3 +7,10 @@
 [0118/140138.048:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
 [0118/140138.049:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
 [0118/140138.049:ERROR:exception_snapshot_win.cc(99)] thread ID 13320 not found in process
+[0122/120346.011:ERROR:file_io.cc(90)] ReadExactly: expected 36, observed 0
+[0122/123448.841:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0122/123449.935:ERROR:exception_snapshot_win.cc(99)] thread ID 12752 not found in process
+[0122/123450.301:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0122/123450.302:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0122/123450.302:ERROR:exception_snapshot_win.cc(99)] thread ID 11368 not found in process
+[0125/151015.075:ERROR:file_io_win.cc(180)] CreateFile C:\Users\Sahana\AppData\Local\Temp\scoped_dir7348_1915040943\Crashpad\settings.dat: The process cannot access the file because it is being used by another process. (0x20)

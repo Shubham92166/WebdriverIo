@@ -10,12 +10,11 @@ module.exports={
     title: 'Makemytrip',
     reviewYourBookingText:'Review your booking',
 
-    Email:'kavyatesting10@gmail.com',
-    Password: 'Pass@123',
-    Title: 'MakeMyTrip - #1 Travel Website 50% OFF on Hotels, Flights & Holiday'
-}
+    username:'kavyatesting10@gmail.com',
+    password: 'Pass@123',
+    title: 'MakeMyTrip - #1 Travel Website 50% OFF on Hotels, Flights & Holiday',
 
-
-
-    
+    fromDestination:'Mumbai',
+    toDestination: 'Delhi',
+    departureDate: '30'
    
