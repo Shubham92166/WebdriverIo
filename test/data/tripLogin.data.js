@@ -17,4 +17,5 @@ module.exports={
     fromDestination:'Mumbai',
     toDestination: 'Delhi',
     departureDate: '30'
-   
+
+}
