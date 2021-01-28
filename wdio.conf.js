@@ -53,7 +53,10 @@ exports.config = {
         maxInstances: 1,
         //
         browserName: 'chrome',
-        acceptInsecureCerts: true
+        acceptInsecureCerts: true,
+        "goog:chromeOptions":{​​​​​
+            mobileEmulation: {​​​​​'deviceName':'Nexus 5'}​​​​​,
+                        }​​​​​,
         // If outputDir is provided WebdriverIO can capture driver session logs
         // it is possible to configure which logTypes to include/exclude.
         // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
@@ -93,7 +96,7 @@ exports.config = {
     baseUrl: 'https://www.makemytrip.com',
     //
     // Default timeout for all waitFor* commands.
-    waitforTimeout: 10000,
+    waitforTimeout: 50000,
     //
     // Default timeout in milliseconds for request
     // if browser driver or grid doesn't send response
@@ -224,8 +227,14 @@ exports.config = {
     /**
      * Function to be executed after a test (in Mocha/Jasmine).
      */
-    // afterTest: function(test, context, { error, result, duration, passed, retries }) {
-    // },
+     //afterTest: function(test, context, { error, result, duration, passed, retries }) 
+     //{
+      //   if(!passed)
+      //   {
+      //       browser.saveScreenshot('./test/screenshot/test.png');
+      //   }
+
+     //},
 
 
     /**

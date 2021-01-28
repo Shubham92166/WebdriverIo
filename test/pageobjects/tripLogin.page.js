@@ -1,5 +1,5 @@
 
-const tripLoginElements = require('../elements/tripLogin.elements')
+const tripLoginEle = require('../elements/tripLogin.elements')
 const browserUtil = require('../../utilities/browser.util')
 const tripLoginData = require('../data/tripLogin.data')
 
@@ -10,14 +10,19 @@ const tripLoginElements = require('../elements/tripLogin.elements')
 
 
 class tripLoginPage{
-    flightBooking()
+
+    flightBookingTrip(from,to)
     {
-        tripLoginElements.fromcity.click()
-        tripLoginElements.fromLocation.click()
-        tripLoginElements.tocity.click()
-        tripLoginElements.toLocation.click()
-        tripLoginElements.setdate.click()
-        tripLoginElements.searchButton.click()
+        tripLoginEle.fromBox.click()
+        tripLoginEle.fromcity.setValue(from)
+        //tripLoginEle.fromcityinput.click()
+        tripLoginEle.fromPlace.click()
+        tripLoginEle.tocity.setValue(to)
+        //tripLoginEle.tocityinput.click()
+        tripLoginEle.toPlace.click()
+        tripLoginEle.setdate.click()
+        tripLoginEle.search.click()
+        
     }
 
 
@@ -25,15 +30,12 @@ class tripLoginPage{
     
        loginelem.loginBtn.click();
        //browser.clearElement(loginelem.EmailID);
-       loginelem.EmailID.setValue(data.username);
+       loginelem.EmailID.setValue(data.Email);
        loginelem.continue.click();
-       loginelem.password.setValue(data.password);
+       loginelem.password.setValue(data.Password);
        loginelem.login.click();
    }
 
-   
-
-   
 
 
     flightBooking(){
