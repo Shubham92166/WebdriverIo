@@ -53,15 +53,15 @@ exports.config = {
         maxInstances: 1,
         browserName: 'chrome',
         acceptInsecureCerts: true,
-        
-            ///"goog:chromeOptions": {
-               /// mobileEmulation: {'deviceName': 'Nexus 5'},
-           /// },
+        "goog:chromeOptions": {
+               mobileEmulation: {'deviceName': 'Nexus 5'},
+            }
+        }],
               // If outputDir is provided WebdriverIO can capture driver session logs
         // it is possible to configure which logTypes to include/exclude.
         // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
         // excludeDriverLogs: ['bugreport', 'server'],
-    }],
+
     //
     // ===================
     // Test Configurations
@@ -140,7 +140,7 @@ exports.config = {
     // See the full list at http://mochajs.org/
     mochaOpts: {
         ui: 'bdd',
-        timeout:600000
+        timeout:60000
     },
     //
     // =====
