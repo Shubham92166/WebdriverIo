@@ -1,0 +1,87 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1611734539557' stop='1611734591386'>
+    <name>Make my trip test cases</name>
+    <title>Make my trip test cases</title>
+    <test-cases>
+        <test-case start='1611734539558' status='passed' stop='1611734563779'>
+            <name>Book a flight</name>
+            <title>Book a flight</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-6'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-87.0.4280.141'/>
+            </parameters>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='dada532f-a816-4a13-a93a-502807fcfe55-attachment.png' type='image/png' size='114699'/>
+            </attachments>
+        </test-case>
+        <test-case start='1611734563782' status='broken' stop='1611734574617'>
+            <name>Booking flight by checking price and flight details</name>
+            <title>Booking flight by checking price and flight details</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-6'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-87.0.4280.141'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>element click intercepted: Element &lt;label for="toCity">...&lt;/label> is not clickable at point (554, 254). Other element would receive the click: &lt;input type="text" autocomplete="off" aria-autocomplete="list" aria-controls="react-autowhatever-1" class="react-autosuggest__input react-autosuggest__input--open react-autosuggest__input--focused" placeholder="To" value="">
+                  (Session info: chrome=87.0.4280.141)</message>
+                <stack-trace>element click intercepted: Element &lt;label for="toCity">...&lt;/label> is not clickable at point (554, 254). Other element would receive the click: &lt;input type="text" autocomplete="off" aria-autocomplete="list" aria-controls="react-autowhatever-1" class="react-autosuggest__input react-autosuggest__input--open react-autosuggest__input--focused" placeholder="To" value="">
+                  (Session info: chrome=87.0.4280.141)
+                    at Object.getErrorFromResponseBody (C:\Users\Sahana\Desktop\MyTrip\node_modules\webdriver\build\utils.js:94:12)
+                    at WebDriverRequest._request (C:\Users\Sahana\Desktop\MyTrip\node_modules\webdriver\build\request.js:134:31)
+                    at processTicksAndRejections (node:internal/process/task_queues:93:5)
+                    at async Element.elementErrorHandlerCallbackFn (C:\Users\Sahana\Desktop\MyTrip\node_modules\@wdio\runner\node_modules\webdriverio\build\middlewares.js:17:32)
+                    at async Element.runCommandWithHooks (C:\Users\Sahana\Desktop\MyTrip\node_modules\@wdio\sync\build\wrapCommand.js:70:25)
+                    at Element.runCommandWithHooks (C:\Users\Sahana\Desktop\MyTrip\node_modules\@wdio\sync\build\wrapCommand.js:65:24)
+                    at Element.wrapCommandFn (C:\Users\Sahana\Desktop\MyTrip\node_modules\@wdio\sync\build\wrapCommand.js:44:44)
+                    at Element.elementErrorHandlerCallback (C:\Users\Sahana\Desktop\MyTrip\node_modules\@wdio\runner\node_modules\webdriverio\build\middlewares.js:34:12)
+                    at tripLoginPage.flightBooking (C:\Users\Sahana\Desktop\MyTrip\test\pageobjects\tripLogin.page.js:45:33)
+                    at Context.&lt;anonymous> (C:\Users\Sahana\Desktop\MyTrip\test\specs\tripSpecs.e2e.js:40:37)
+                    at Context.executeSync (C:\Users\Sahana\Desktop\MyTrip\node_modules\@wdio\sync\build\index.js:25:22)
+                    at C:\Users\Sahana\Desktop\MyTrip\node_modules\@wdio\sync\build\index.js:46:68</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1611734574619' status='broken' stop='1611734591380'>
+            <name>Logging into MakeMyTrip</name>
+            <title>Logging into MakeMyTrip</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-6'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-87.0.4280.141'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>element click intercepted: Element &lt;button disabled="" class="capText font16" data-cy="continueBtn">...&lt;/button> is not clickable at point (674, 299). Other element would receive the click: &lt;form>...&lt;/form>
+                  (Session info: chrome=87.0.4280.141)</message>
+                <stack-trace>element click intercepted: Element &lt;button disabled="" class="capText font16" data-cy="continueBtn">...&lt;/button> is not clickable at point (674, 299). Other element would receive the click: &lt;form>...&lt;/form>
+                  (Session info: chrome=87.0.4280.141)
+                    at Object.getErrorFromResponseBody (C:\Users\Sahana\Desktop\MyTrip\node_modules\webdriver\build\utils.js:94:12)
+                    at WebDriverRequest._request (C:\Users\Sahana\Desktop\MyTrip\node_modules\webdriver\build\request.js:134:31)
+                    at processTicksAndRejections (node:internal/process/task_queues:93:5)
+                    at async Element.elementErrorHandlerCallbackFn (C:\Users\Sahana\Desktop\MyTrip\node_modules\@wdio\runner\node_modules\webdriverio\build\middlewares.js:17:32)
+                    at async Element.runCommandWithHooks (C:\Users\Sahana\Desktop\MyTrip\node_modules\@wdio\sync\build\wrapCommand.js:70:25)
+                    at Element.runCommandWithHooks (C:\Users\Sahana\Desktop\MyTrip\node_modules\@wdio\sync\build\wrapCommand.js:65:24)
+                    at Element.wrapCommandFn (C:\Users\Sahana\Desktop\MyTrip\node_modules\@wdio\sync\build\wrapCommand.js:44:44)
+                    at Element.elementErrorHandlerCallback (C:\Users\Sahana\Desktop\MyTrip\node_modules\@wdio\runner\node_modules\webdriverio\build\middlewares.js:34:12)
+                    at tripLoginPage.login (C:\Users\Sahana\Desktop\MyTrip\test\pageobjects\tripLogin.page.js:34:27)
+                    at Context.&lt;anonymous> (C:\Users\Sahana\Desktop\MyTrip\test\specs\tripSpecs.e2e.js:51:19)
+                    at Context.executeSync (C:\Users\Sahana\Desktop\MyTrip\node_modules\@wdio\sync\build\index.js:25:22)
+                    at C:\Users\Sahana\Desktop\MyTrip\node_modules\@wdio\sync\build\index.js:46:68</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
