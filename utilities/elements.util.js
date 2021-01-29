@@ -1,110 +1,199 @@
 class ElementUtil {
 
     isElementDisplayed(element){
-        element.waitForDisplayed()
-        return element.isDisplayed()
+        try {
+            element.waitForDisplayed({timeout: 5000})
+            return element.isDisplayed()
+        } catch (error) {
+            console.log("Element is not displayed yet");
+        }
+        
     }
 
     isElementEnabled(element){
-        element.waitForDisplayed()
+       try {
+        element.waitForDisplayed({timeout: 5000})
         return element.isEnabled()
+       } catch (error) {
+           console.log("Element is not enabled");
+       }
     }
 
     clickElement(element){
-        element.waitForDisplayed()
+       try {
+        element.waitForDisplayed({timeout: 5000})
         element.click()
+       } catch (error) {
+           console.log("Element is not found to click");
+       }
     }
 
     setValue(element,value){
-        element.waitForDisplayed()
+       try {
+        element.waitForDisplayed({timeout: 5000})
         element.clearValue()
         element.setValue(value)
+       } catch (error) {
+           console.log("value is not set for the element");
+       }
     }
 
     getText(element){
-        element.waitForDisplayed()
-        return element.getText()
+        try {
+            element.waitForDisplayed({timeout: 5000})
+            return element.getText()
+        } catch (error) {
+            console.log("element is not found to get text");
+        }
     }
 
     isElementExisting(element){
-        return element.isExisting()
+        try {
+            return element.isExisting()
+        } catch (error) {
+            console.log("Element does not exists");
+        }
     }
 
     isElementSelected(element){
-        element.waitForDisplayed()
-        return element.isSelected()
+        try {
+            element.waitForDisplayed({timeout: 5000})
+            return element.isSelected()
+        } catch (error) {
+            console.log("element is not selected");
+        }
     }
 
     isElementClickable(element){
-        element.waitForEnabled(time)
-        return element.isClickable()
+       try {
+            element.waitForEnabled({timeout: 5000})
+            return element.isClickable()
+       } catch (error) {
+           console.log("element is not clickable");
+       }
     }
 
     scrollElementIntoView(element){        
-        element.scrollIntoView()
+        try {
+            element.scrollIntoView()
+        } catch (error) {
+            console.log("element is not in view");
+        }
     }
 
     clearInput(element){
-        element.waitForDisplayed(time)
-        element.clearValue()
+        try {
+            element.waitForDisplayed({timeout: 5000})
+            element.clearValue()
+        } catch (error) {
+            console.log("element value is not cleared");
+        }
     }
 
     getElementProperty(element, property){
-        element.waitForDisplayed()
-        return element.getProperty(property)
+        try {
+            element.waitForDisplayed({timeout: 5000})
+            return element.getProperty(property)
+        } catch (error) {
+            console.log("didnt get the element property");
+        }
     }
 
     getElementLocation(element){
-        element.waitForDisplayed()
-        return element.getLocation()
+        try {
+            element.waitForDisplayed({timeout: 5000})
+            return element.getLocation()
+        } catch (error) {
+            console.log("element location is not found");
+        }
     }
 
     getElementAttribute(element, attributeName){
-        element.waitForDisplayed()
-        return element.getAttribute(attributeName)
+        try {
+            element.waitForDisplayed({timeout: 5000})
+            return element.getAttribute(attributeName)
+        } catch (error) {
+            console.log("element attribute is not found");
+        }
     }
 
     getTagNameOfElement(element){
-        element.waitForDisplayed()
-        return element.getTagName()
+        try {
+            element.waitForDisplayed({timeout: 5000})
+            return element.getTagName()
+        } catch (error) {
+            console.log("didnt get element tagname");
+        }
     }
 
     getElementValue(element){
-        element.waitForDisplayed()
-        return element.getValue()
+        try {
+            element.waitForDisplayed({timeout: 5000})
+            return element.getValue()
+        } catch (error) {
+            console.log("didnt get the element value");
+        }
     }
 
     isElementFocused(element){
-        element.waitForDisplayed()
-        return element.isFocused()
+        try {
+            element.waitForDisplayed({timeout: 5000})
+            return element.isFocused()
+        } catch (error) {
+            console.log("element is not in focus");
+        }
     }
 
     selectAttributeByValue(element, attribute, value){
-        element.waitForDisplayed()
-        element.selectByAttribute(attribute, value)
+        try {
+            element.waitForDisplayed({timeout: 5000})
+            element.selectByAttribute(attribute, value)
+        } catch (error) {
+            console.log("element is not selected by attribute");
+        }
     }
 
     selectElementByIndex(element, index){
-        element.waitForDisplayed()
-        element.selectByIndex(index)
+        try {
+            element.waitForDisplayed({timeout: 5000})
+            element.selectByIndex(index)
+        } catch (error) {
+            console.log("element is not selected by index");
+        }
     }
 
     selectByText(element, text){
-        element.waitForDisplayed()
-        element.selectByVisibleText(text)
+        try {
+            element.waitForDisplayed({timeout: 5000})
+            element.selectByVisibleText(text)
+        } catch (error) {
+            console.log("element is not selected by visible text");
+        }
     }
 
     dragAndDropElement(element, target){
-        element.waitForDisplayed()
-        element.dragAndDrop(target)
+        try {
+            element.waitForDisplayed({timeout: 5000})
+            element.dragAndDrop(target)
+        } catch (error) {
+            console.log("drag and drop is not happened ");
+        }
     }
 
     waitForClickableElement(element,timeout, reverse, timeoutMsg, interval){
-        element.waitForClickable({timeout, reverse, timeoutMsg, interval})
+        try {
+            element.waitForClickable({timeout, reverse, timeoutMsg, interval})
+        } catch (error) {
+            console.log("element is not clickable");
+        }
     }
 
     takeScreenshot(element, filename){
-        element.saveScreenshot(filename)
+       try {
+            element.saveScreenshot(filename)
+       } catch (error) {
+           console.log("didnt take the screenshot");
+       }
     }
 
 
