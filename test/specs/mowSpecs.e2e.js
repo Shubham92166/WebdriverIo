@@ -1,14 +1,18 @@
-const mobileSearchPage=require('../pageobjects/mow.SearchFlight.page');
-//const filterPage=require('../pageobjects/travelFilter.page');
-//const { allFlight } = require('../pageobjects/travelSearch.page');
+//@Author: Shubham
+const mobileSearchPage=require('../pageobjects/mmtSearch.page');
+const mobileFilterPage=require('../pageobjects/mmtFilters.page');
 const {expect}=require("chai");
-
-//@Author:Shubham 
+const mobileHomePage=require('../pageobjects/mmtHome.page');
 describe("Flight Booking in mobile browser", function(){
     it("Searching flight", function(){
     browser.url('/');
-    mobileSearchPage.mobileSearchFlight();
+    mobileHomePage.home();
+    mobileSearchPage.mobileSearch();
     browser.pause(2000);
 });
-
+    it("Filtering flight",function(){
+        mobileFilterPage.FlightFilters();
+        browser.pause(2000);
+    });
+    
 });

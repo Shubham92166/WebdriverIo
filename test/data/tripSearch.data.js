@@ -1,3 +1,4 @@
 module.exports={
-    toCity:"Bengaluru, India"
+    toCity:"Bengaluru",
+    fromCity:"Kolkata"
 }
