@@ -1,4 +1,6 @@
+//import {ReportAggregator, HtmlReporter} from '@rpii/wdio-html-reporter';
 exports.config = {
+    
     //
     // ====================
     // Runner Configuration
@@ -53,11 +55,15 @@ exports.config = {
         maxInstances: 1,
         //
         browserName: 'chrome',
-        acceptInsecureCerts: true
+        acceptInsecureCerts: true,
         // If outputDir is provided WebdriverIO can capture driver session logs
         // it is possible to configure which logTypes to include/exclude.
         // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
         // excludeDriverLogs: ['bugreport', 'server'],
+
+        "goog:chromeOptions":{
+            mobileEmulation:{'deviceName':"iPad"},
+        }, 
     }],
     //
     // ===================
@@ -131,24 +137,25 @@ exports.config = {
     reporters: ['spec'],
     reporters: [['allure',{
         outputDir : 'allure-results',
-        disableWebdriverStepsReporting : true,
+        disableWebdriverStepsReporting : false,
         disableWebdriverScreenhotsReporting : true ,
     }]],
-   /**  reporters:[['HtmlReporter', {
-            outputDir: 'html-reports',
-           // filename: 'report.html',
-            //reportTitle: 'Test Report Title',
-            //showInBrowser: true,
-            //useOnAfterCommandForScreenshot: false,
-            }
-         ]],   **/
+    /** reporters:['spec',[html, {
+        debug : true,
+        outputDir: './reports/html-reports/',
+        filename: 'report.html',
+        reportTitle: 'Test Report Title',
+        //showInBrowser: true,
+        //useOnAfterCommandForScreenshot: false,
+        }
+        ]],   **/
       
-     /**  reporters: ['spec', 'html-format',{
+     reporters: ['spec', 'html-format',{
       reporterOptions: { htmlFormat: {
       outputDir: './reports/'
       }, },
      // screenshotPath: `./screenShots`, 
-       }], **/
+       }], 
     
      
     //
@@ -171,8 +178,26 @@ exports.config = {
      * @param {Object} config wdio configuration object
      * @param {Array.<Object>} capabilities list of capabilities details
      */
-    // onPrepare: function (config, capabilities) {
-    // },
+    onPrepare: function (config, capabilities) {
+        let reportAggregator = new ReportAggregator({
+            outputDir: './reports/html-reports/',
+            filename: 'master-report.html',
+            reportTitle: 'Master Report',
+            browserName : browser.capabilities.browserName,
+            // to use the template override option, can point to your own file in the test project:
+            // templateFilename: path.resolve(__dirname, '../template/wdio-html-reporter-alt-template.hbs')
+        });
+        reportAggregator.clean() ;
+
+        global.reportAggregator = reportAggregator;
+    },
+    
+    onComplete: function(exitCode, config, capabilities, results) {
+        (async () => {
+            await global.reportAggregator.createReport();
+        })();
+
+    },
     /**
      * Gets executed before a worker process is spawned and can be used to initialise specific service
      * for that worker as well as modify runtime environments in an async fashion.
@@ -243,7 +268,7 @@ exports.config = {
     /**
      * Function to be executed after a test (in Mocha/Jasmine).
      */
-     afterTest: function(test, context, { error, result, duration, passed, retries }) 
+    /** afterTest: function(test, context, { error, result, duration, passed, retries }) 
      {
          const fs=require('fs')
 
@@ -255,7 +280,7 @@ exports.config = {
             browser.saveScreenshot('./test/screenshot/${test.title.replace(/\s/g,"_")}.png');
         }
 
-     },
+     },**/
 
 
     /**
@@ -308,3 +333,4 @@ exports.config = {
     //onReload: function(oldSessionId, newSessionId) {
     //}
 }
+
