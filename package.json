@@ -4,10 +4,9 @@
   "main": "index.js",
   "scripts": {
     "test": "wdio wdio.conf.js",
-    "test1":"wdio ./wdio/wdio.chrome.conf.js",
-    "test2":"wdio ./wdio/wdio.firefox.conf.js",
-    "test3":"wdio ./wdio/wdio.multi.conf.js"
-
+    "test1": "wdio ./wdio/wdio.chrome.conf.js",
+    "test2": "wdio ./wdio/wdio.firefox.conf.js",
+    "test3": "wdio ./wdio/wdio.multi.conf.js"
   },
   "author": "",
   "license": "ISC",
@@ -22,7 +21,8 @@
     "chai-webdriverio": "^1.0.0",
     "chromedriver": "^87.0.4",
     "wdio-chromedriver-service": "^6.0.4",
-    "wdio-geckodriver-service": "^1.1.1"
+    "wdio-geckodriver-service": "^1.1.1",
+    "wdio-html-format-reporter": "^0.4.0"
   },
   "directories": {
     "test": "test"
@@ -37,6 +37,8 @@
   "homepage": "https://github.com/Shubham92166/WebdriverIo#readme",
   "description": "",
   "dependencies": {
+    "@rpii/wdio-html-reporter": "^6.3.1",
+    "@wdio/allure-reporter": "^6.11.0",
     "edgedriver": "^4.17134.1",
     "firefox-profile": "^4.0.0",
     "geckodriver": "^1.21.1",

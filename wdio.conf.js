@@ -129,9 +129,28 @@ exports.config = {
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter.html
     reporters: ['spec'],
-
-
+    reporters: [['allure',{
+        outputDir : 'allure-results',
+        disableWebdriverStepsReporting : true,
+        disableWebdriverScreenhotsReporting : true ,
+    }]],
+   /**  reporters:[['HtmlReporter', {
+            outputDir: 'html-reports',
+           // filename: 'report.html',
+            //reportTitle: 'Test Report Title',
+            //showInBrowser: true,
+            //useOnAfterCommandForScreenshot: false,
+            }
+         ]],   **/
+      
+     /**  reporters: ['spec', 'html-format',{
+      reporterOptions: { htmlFormat: {
+      outputDir: './reports/'
+      }, },
+     // screenshotPath: `./screenShots`, 
+       }], **/
     
+     
     //
     // Options to be passed to Mocha.
     // See the full list at http://mochajs.org/
@@ -224,14 +243,19 @@ exports.config = {
     /**
      * Function to be executed after a test (in Mocha/Jasmine).
      */
-     //afterTest: function(test, context, { error, result, duration, passed, retries }) 
-     //{
-      //   if(!passed)
-      //   {
-      //       browser.saveScreenshot('./test/screenshot/test.png');
-      //   }
+     afterTest: function(test, context, { error, result, duration, passed, retries }) 
+     {
+         const fs=require('fs')
 
-     //},
+         if(!fs.existsSync('./test/screenshot'))
+         fs.mkdir('./test/screenshot')
+        if(!passed)
+        {
+            test.title.replace(/\s/g,"_")
+            browser.saveScreenshot('./test/screenshot/${test.title.replace(/\s/g,"_")}.png');
+        }
+
+     },
 
 
     /**
