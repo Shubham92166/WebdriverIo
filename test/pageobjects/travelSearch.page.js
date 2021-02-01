@@ -4,11 +4,6 @@ const {expect}=require("chai");
 //@Author:Shubham 
 class travelSearchPage{
     searchFlight(){
-        //elem=$('//div[@data-cy="outsideModal"]');
-        //if(elem.isDisplayed()){
-        //login();
-
-    //}
         searchElements.searchButton.click();
     }
     sortingFlights(){
