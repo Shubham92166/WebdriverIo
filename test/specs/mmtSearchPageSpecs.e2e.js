@@ -3,7 +3,7 @@ const searchPageElements = require('../elements/mmtSearchPage.element')
 const browserUtil = require('../../utilities/browser.util')
 const tripData=require('../data/tripLogin.data')
 
-it ('search flight for To and From City from Mobile browser',function(){
+ describe('search flight for To and From City from Mobile browser',function(){
     
     it("Flight Search",function()
     {
