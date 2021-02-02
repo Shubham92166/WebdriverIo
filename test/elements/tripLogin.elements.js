@@ -33,7 +33,7 @@ class tripLoginElements{
     get fromcityinput() {return $('//p[@class="font14.appendBottom5.blackText][1]')}
     get toPlace() {return $('//p[text()="Delhi Airport"]')}
     get tocityinput() {return $('//div[@class="makeFlex.hrtlCenter"][3]')}
-    get setdate() {return $ ('//p[text()="30"]')}
+    get setdate() {return $ ('//p[text()="28"]')}
     get search() {return $ ('//a[text()="Search"]')}
     
     
