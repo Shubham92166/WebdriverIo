@@ -1,5 +1,6 @@
-//import {ReportAggregator, HtmlReporter} from '@rpii/wdio-html-reporter';
+const {ReportAggregator, HtmlReporter} = require('@rpii/wdio-html-reporter');
 exports.config = {
+    
     
     //
     // ====================
@@ -134,28 +135,31 @@ exports.config = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter.html
-    reporters: ['spec'],
-    reporters: [['allure',{
-        outputDir : 'allure-results',
-        disableWebdriverStepsReporting : false,
-        disableWebdriverScreenhotsReporting : true ,
-    }]],
-    /** reporters:['spec',[html, {
-        debug : true,
+    // reporters: ['spec'],
+
+    reporters:['spec',[HtmlReporter, {
+        debug: true,
         outputDir: './reports/html-reports/',
         filename: 'report.html',
-        reportTitle: 'Test Report Title',
-        //showInBrowser: true,
-        //useOnAfterCommandForScreenshot: false,
-        }
-        ]],   **/
+        reportTitle: 'Test Report',
+        showInBrowser: true,
+        useOnAfterCommandForScreenshot: false,
+    }],['allure',{
+       outputDir : 'allure-results',
+       disableWebdriverStepsReporting : false,
+       disableWebdriverScreenhotsReporting : true ,
+      }]],
+
       
-     reporters: ['spec', 'html-format',{
-      reporterOptions: { htmlFormat: {
-      outputDir: './reports/'
-      }, },
-     // screenshotPath: `./screenShots`, 
-       }], 
+    // reporters: ['spec', 'html-format'],
+    // reporterOptions: {
+    //   htmlFormat: {
+    //     outputDir: './reports/'
+    //   },
+    // },
+    //screenshotPath: `./screenShot`,     
+    // ...    
+  
     
      
     //
