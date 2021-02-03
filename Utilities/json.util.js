@@ -1,4 +1,4 @@
-const { Console } = require('console');
+
 const fs = require('fs');
 
 const readJSONFile=(path)=>{
@@ -12,15 +12,10 @@ const readJSONFile=(path)=>{
 }
 
 const WriteFile=(path)=> {
-    const vistara={
-        tagline: 'Vistara',
-        Time: '21:05',
-        Duration: '02h 45 min',
-        Cost: 6790
-     };
+    
     try{
         
-        fs.writeFile(path, JSON.stringify(vistara, null, 2), err=>{
+        fs.writeFile(path, JSON.stringify(obj, null, 2), err=>{
             if(err){
                 console.log("error");
             }else
@@ -34,10 +29,11 @@ const WriteFile=(path)=> {
             console.log(exception)
         }
     }
-  
+    const addDataToJSON = (path, obj) =>{
+        let jsonObj= readJSONFile(path)
+        jsonObj = {...jsonObj, ...obj}
+        WriteJSONFile(path, jsonObj);
+    }
+module.exports={ addDataToJSON};
 
-  
 
-WriteFile("E:/MMT/trip.json")
-
-console.log(readJSONFile("E:/MMT/trip.json"));

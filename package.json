@@ -4,10 +4,9 @@
   "main": "index.js",
   "scripts": {
     "test": "wdio wdio.conf.js",
-    "test1":"wdio ./wdio/wdio.chrome.conf.js",
-    "test2":"wdio ./wdio/wdio.firefox.conf.js",
-    "test3":"wdio ./wdio/wdio.multi.conf.js"
-
+    "test1": "wdio ./wdio/wdio.chrome.conf.js",
+    "test2": "wdio ./wdio/wdio.firefox.conf.js",
+    "test3": "wdio ./wdio/wdio.multi.conf.js"
   },
   "author": "",
   "license": "ISC",
@@ -41,6 +40,9 @@
     "firefox-profile": "^4.0.0",
     "geckodriver": "^1.21.1",
     "local-runner": "^0.1.1-alpha",
+    "mongodb": "^3.6.3",
+    "mongoose": "^5.11.14",
+    "mysql": "^2.18.1",
     "webdriverio": "^6.10.11"
   }
 }
