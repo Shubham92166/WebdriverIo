@@ -8,6 +8,9 @@ module.exports = {
   flightDetailsText: 'Flight Details',
   title: 'Makemytrip',
   reviewYourBookingText: 'Review your booking',
+  fromLocationText: 'bengaluru',
+  toLocationText: 'hyderabad',
+  viewFlightDetailsText: 'VIEW FLIGHT DETAILS',
 
   username: 'kavyatesting10@gmail.com',
   password: 'Pass@123',
