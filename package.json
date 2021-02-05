@@ -9,7 +9,6 @@
     "test3": "wdio ./wdio/wdio.edge.conf.js",
     "test4": "wdio ./wdio/wdio.multi.conf.js",
     "test5": "wdio ./wdio/wdio.mow.conf.js"
-
   },
   "author": "",
   "license": "ISC",
