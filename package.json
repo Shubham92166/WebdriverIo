@@ -6,22 +6,30 @@
     "test": "wdio wdio.conf.js",
     "test1": "wdio ./wdio/wdio.chrome.conf.js",
     "test2": "wdio ./wdio/wdio.firefox.conf.js",
-    "test3": "wdio ./wdio/wdio.multi.conf.js"
+    "test3": "wdio ./wdio/wdio.edge.conf.js",
+    "test4": "wdio ./wdio/wdio.multi.conf.js",
+    "test5": "wdio ./wdio/wdio.mow.conf.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@rpii/wdio-html-reporter": "^6.3.1",
+    "@wdio/allure-reporter": "^6.11.0",
     "@wdio/cli": "^6.10.11",
     "@wdio/firefox-profile-service": "^6.10.6",
-    "@wdio/local-runner": "^6.10.13",
-    "@wdio/mocha-framework": "^6.10.11",
-    "@wdio/spec-reporter": "^6.10.6",
-    "@wdio/sync": "^6.10.11",
+    "@wdio/local-runner": "^6.12.1",
+    "@wdio/mocha-framework": "^6.11.0",
+    "@wdio/selenium-standalone-service": "^6.12.1",
+    "@wdio/spec-reporter": "^6.11.0",
+    "@wdio/sync": "^6.11.0",
     "chai": "^4.2.0",
     "chai-webdriverio": "^1.0.0",
     "chromedriver": "^87.0.4",
+    "wdio-allure-reporter": "^0.8.3",
     "wdio-chromedriver-service": "^6.0.4",
-    "wdio-geckodriver-service": "^1.1.1"
+    "wdio-geckodriver-service": "^1.1.1",
+    "wdio-html-format-reporter": "^0.4.0",
+    "wdio-spec-reporter": "^0.1.5"
   },
   "directories": {
     "test": "test"
@@ -36,13 +44,14 @@
   "homepage": "https://github.com/Shubham92166/WebdriverIo#readme",
   "description": "",
   "dependencies": {
+    "@rpii/wdio-html-reporter-pdf": "^6.2.3",
+    "@wdio/config": "^6.10.11",
     "edgedriver": "^4.17134.1",
     "firefox-profile": "^4.0.0",
     "geckodriver": "^1.21.1",
     "local-runner": "^0.1.1-alpha",
-    "mongodb": "^3.6.3",
-    "mongoose": "^5.11.14",
-    "mysql": "^2.18.1",
+    "pngjs": "^6.0.0",
+    "source-map-support": "^0.5.19",
     "webdriverio": "^6.10.11"
   }
 }
