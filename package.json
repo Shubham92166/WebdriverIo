@@ -50,6 +50,7 @@
     "firefox-profile": "^4.0.0",
     "geckodriver": "^1.21.1",
     "local-runner": "^0.1.1-alpha",
+    "mongoose": "^5.11.15",
     "pngjs": "^6.0.0",
     "source-map-support": "^0.5.19",
     "webdriverio": "^6.10.11"
