@@ -35,8 +35,3 @@ const insertFlightDetails = (flightDetails) => {
 module.exports = {
   insertFlightDetails,
 };
-
-// insertFlightDetails({
-//   From: 'Bangalore',
-//   To: 'Dehli',
-// });
