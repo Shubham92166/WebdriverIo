@@ -48,5 +48,13 @@ class mobileSearch{
     get departureCity(){
         return $('(//p[text()="Kolkata"])[1]');
     }
+
+    get flights() {return $('(//span[@class="spriteIcnWrap"])[1]')}
+    get from() {return $('(//span[text()="FROM"])[1]')}
+    get fromSearch() {return $('#autoSuggestWidget')}
+    get toSearch() {return $('#autoSuggestWidget')}
+    get departureDateField() {return $('//span[text()="DEPARTURE DATE"]')}
+    get doneButton() {return $('(//a[text()="DONE"])')}
+    get searchFlights() {return $('(//button[text()="Search Flights"])')}
 }
 module.exports=new mobileSearch();
