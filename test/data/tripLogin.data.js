@@ -19,4 +19,5 @@ module.exports = {
   fromDestination: 'Mumbai',
   toDestination: 'Delhi',
   departureDate: '28',
+  newDestinaton : 'Bangalore'
 };
