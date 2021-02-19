@@ -50,5 +50,12 @@ class ReviewHotelBooking {
 			return $('//p[@class="latoBlack redText"]');
 		}
 	}
+	get hotelNameDisplayedOnReviewPage() {
+		if (isMobile) {
+			return $('//h3[@class="font16 latoBlack blackText appendBottom5"]');
+		} else {
+			return $('//h3[@class="latoBlack font22 blackText"]');
+		}
+	}
 }
 module.exports = new ReviewHotelBooking();

@@ -2,7 +2,12 @@ const switchToWindow = require("../../Utilities/browser");
 const reviewHotelBookingPageElements = require("../elements/reviewPageBeforePayment.elements");
 //const ReviewPageElements = require("../elements/reviewHotelBookingPage.elements");
 const utilElements = require("../../Utilities/elements.util");
+const hotelResultPage = require("../pageobjects/hotelResultPage.page");
 const utilAssert = require("../../Utilities/assert.util");
+const { expect } = require("chai");
+//const {
+//	HotelNameDisplayedOnResultPage,
+//} = require("../pageobjects/hotelResultPage.page");
 // ReviewPageElements = require("../elements/reviewHotelBookingPage.elements");
 //const { switchToWindowContaining } = require("../../Utilities/browser");
 class ReviewPage {
@@ -34,17 +39,33 @@ class ReviewPage {
 		//utilAssert.validateIfEqual(
 		//reviewHotelBookingPage.hotelNameFromReviewPage
 		//);
+	}
+	validateIfCheckInDateSame() {
 		expect(
-			reviewHotelBookingPageElements.checkInDate.getText()
+			reviewHotelBookingPageElements.checkInDate.getText(),
+			"Same"
 		).to.have.contain("24 Feb");
-		utilAssert.validateIfElementListContainsText(
-			reviewHotelBookingPageElements.checkOutDate,
-			"25 Feb"
-		);
+	}
+	validateIfCheckOutDateSame() {
+		expect(
+			reviewHotelBookingPageElements.checkOutDate.getText(),
+			"Same"
+		).to.have.contain("25 Feb");
+	}
+	validateIfTotalAmountDisplayed() {
 		utilAssert.validateIfExists(
 			reviewHotelBookingPageElements.totalAmount,
 			"Total Amount is displayed"
 		);
 	}
+	validateIfHotelNameSame() {
+		expect(
+			hotelResultPage.hotelNameDisplayedOnResultPage,
+			"Same"
+		).to.have.contain(
+			reviewHotelBookingPageElements.hotelNameDisplayedOnReviewPage.getText()
+		);
+	}
 }
+
 module.exports = new ReviewPage();

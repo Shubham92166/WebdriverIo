@@ -9,6 +9,9 @@ class detailPage {
 		}
 		util.waitForPageLoad();
 		browser.pause(3000);
+		if (isMobile) {
+			util.scrollElementIntoView(detailPageElements.bookNowButton);
+		}
 		//util.scrollElementIntoView(detailPageElements.bookNowButton);
 		util.clickElement(detailPageElements.bookNowButton);
 	}
