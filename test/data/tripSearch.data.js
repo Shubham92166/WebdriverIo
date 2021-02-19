@@ -1,4 +1,5 @@
-module.exports={
-    toCity:"Bengaluru",
-    fromCity:"Kolkata"
-}
+//@Shubham
+module.exports = {
+	toCity: "Bengaluru",
+	fromCity: "Kolkata",
+};
