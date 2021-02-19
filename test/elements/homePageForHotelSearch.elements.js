@@ -1,3 +1,4 @@
+//@Shubham
 class homePage {
 	get hotelIcon() {
 		if (isMobile) {

@@ -2,6 +2,7 @@ const homeElementsForHotelBooking = require("../elements/homePageForHotelSearch.
 const switchWindow = require("../../Utilities/browser");
 const util = require("../../Utilities/elements.util");
 class HomePage {
+	//@Shubham
 	HomePageMethod() {
 		if (isMobile) {
 			util.waitForPageLoad();

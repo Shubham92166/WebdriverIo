@@ -5,11 +5,7 @@ const utilElements = require("../../Utilities/elements.util");
 const hotelResultPage = require("../pageobjects/hotelResultPage.page");
 const utilAssert = require("../../Utilities/assert.util");
 const { expect } = require("chai");
-//const {
-//	HotelNameDisplayedOnResultPage,
-//} = require("../pageobjects/hotelResultPage.page");
-// ReviewPageElements = require("../elements/reviewHotelBookingPage.elements");
-//const { switchToWindowContaining } = require("../../Utilities/browser");
+//@Shubham
 class ReviewPage {
 	bookNowHotel() {
 		utilElements.clickElement(reviewHotelBookingPageElements.firstNameField);

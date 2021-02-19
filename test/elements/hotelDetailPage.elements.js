@@ -1,3 +1,4 @@
+//@Shubham
 class detailPage {
 	get bookNowButton() {
 		if (isMobile) {
