@@ -39,25 +39,25 @@ class ReviewPage {
 	validateIfCheckInDateSame() {
 		expect(
 			reviewHotelBookingPageElements.checkInDate.getText(),
-			"Same"
+			"Checkin Dates are not same"
 		).to.have.contain("24 Feb");
 	}
 	validateIfCheckOutDateSame() {
 		expect(
 			reviewHotelBookingPageElements.checkOutDate.getText(),
-			"Same"
+			"Checkout dates are not same"
 		).to.have.contain("25 Feb");
 	}
 	validateIfTotalAmountDisplayed() {
 		utilAssert.validateIfExists(
 			reviewHotelBookingPageElements.totalAmount,
-			"Total Amount is displayed"
+			"Total Amount is not displayed"
 		);
 	}
 	validateIfHotelNameSame() {
 		expect(
 			hotelResultPage.hotelNameDisplayedOnResultPage,
-			"Same"
+			"Hotel name is not same"
 		).to.have.contain(
 			reviewHotelBookingPageElements.hotelNameDisplayedOnReviewPage.getText()
 		);
