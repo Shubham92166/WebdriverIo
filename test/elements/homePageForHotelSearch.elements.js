@@ -38,16 +38,16 @@ class homePage {
 	}
 	get checkInCalendarDateSelect() {
 		if (isMobile) {
-			return $('//div[@aria-label="Wed Feb 24 2021"]');
+			return $('//div[@aria-label="Mon Mar 15 2021"]');
 		} else {
-			return $('//div[@aria-label="Wed Feb 24 2021"]');
+			return $('//div[@aria-label="Mon Mar 15 2021"]');
 		}
 	}
 	get checkOutDateSelect() {
 		if (isMobile) {
-			return $('//div[@aria-label="Thu Feb 25 2021"]');
+			return $('//div[@aria-label="Tue Mar 16 2021"]');
 		} else {
-			return $('//div[@aria-label="Thu Feb 25 2021"]');
+			return $('//div[@aria-label="Tue Mar 16 2021"]');
 		}
 	}
 	get submitButton() {
