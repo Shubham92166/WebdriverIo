@@ -6,7 +6,7 @@ class travellers{
     get mobileno() { return $('//div[@class="tvlrFormField make_relative MOBILE_NUMBER"]//input[@class="tvlrInput "]')}  // get it from travellers detail Data
     get email() { return $('//div[@class="tvlrFormField make_relative EMAIL"]//input[@class="tvlrInput "]')} // get it from travellers detail Data
     get submitTraveller() { return $('//button[@class="ack-cta btn fli_primary_btn text-uppercase"]')}
-    get headerReview() { return $('//div[h3="Review Details"]')}
+    get headerReview() { return $('//div[@id="root"]//h3[.="Review Details"]')}
     get flightlogo() { return $('//span[@class="chNavIcon appendBottom2 chSprite chFlights active"]') }    
     get submitSearch() { return $('//a[@class="primaryBtn font24 latoBold widgetSearchBtn "]')}
 
