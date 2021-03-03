@@ -16,7 +16,10 @@ class searchResult {
 				timeout: 20000,
 			});
 			searchResultPageElements.firstFlightViewPricesButton.click();
+			driver.pause(3000);
+			searchResultPageElements.firstFlightBookNowButton.waitForExist({ timeout: 5000 });
 			//searchResultPageElements.firstFlightBookNowButton.waitForDisplayed();
+			// searchResultPageElements.firstFlightBookNowButton.waitForDisplayed({ timeout: 3000 });
 			searchResultPageElements.firstFlightBookNowButton.click();
 		}
 	}

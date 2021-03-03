@@ -10,6 +10,23 @@ class BrowserUtil {
 		return;
 	};
 
+	switchToWindowContainingURL(partialurl) {
+		let AllWindowHandles = browser.getWindowHandles();
+		let currentWindowHandle = browser.getWindowHandle();
+		//console.log(AllWindowHandles);
+		//console.log(currentWindowHandle);
+
+		for (var handle = 0; handle <= AllWindowHandles.length; handle++) {
+			browser.switchToWindow(AllWindowHandles[handle]);
+			if (browser.getUrl().includes(partialurl)) {
+				//console.log("new window "+);
+				return;
+			}  
+			browser.switchToWindow(currentWindowHandle);
+			
+		}
+	}
+
 	maximizingWindow() {
 		browser.maximizeWindow();
 	}

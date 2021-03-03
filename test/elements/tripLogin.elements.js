@@ -7,15 +7,19 @@ class tripLoginElements{
     get from () {return $('//input[@placeholder="From"]')}
     get to () {return $('//input[@placeholder="To"]')}
     get fromLocation () {return $('//p[text()="Kempegowda International Airport"]')}
+
     get toLocation () {return $('//p[text()="Rajiv Gandhi Intl Airport"]')}
     get departure () {return $('//label[@for="departure"]')}
-    get departureDate () {return $('//div[@class="DayPicker-Month"][1]//p[text()="22"]')}
+    get departureDate () {return $('//div[@class="DayPicker-Month"][1]//p[text()="28"]')}
     get searchButton () {return $('//a[text()="Search"]')}
-    get flightDetailsButton () {return $('(//div[contains(@id,"fli_list_item_")][1]/..//span[text()="Flight Details"])[1]')}
+    // get flightDetailsButton () {return $('/html//div[@id="premEcon"]/div/div[1]/div[@class="card-upperpart-wrapper"]//span[.="Flight Details"]')}
+
+    get flightDetailsButton() {return $('(/html//div[@id="premEcon"]/div/div[1]/div[1]//span[.="Flight Details"])')}
+
     get cancellationButton() {return $('(//div[@id="flightDetailsTab-0"][1]/..//a[text()="CANCELLATION"][1])')}
-    get viewPrices () {return $('(//div[contains(@id,"fli_list_item_")][1]/..//button[contains(@id,"bookbutton-RKEY:")])[1]')}
+    get viewPrices () {return $('/html//div[@id="premEcon"]/div/div[1]/div[1]//div[@class="fli-list-body-section"]//button[.="View Prices"]')}
     get lowFareBooknowButton () {return $('(//div[contains(@id,"fli_list_item")][1]//button[text()="Book Now"][1])[1]')}
-    get reviewYourBooking () {return $('//div//h4[text()="Review your booking"]')}
+    get reviewYourBooking () {return $('/html//div[@id="premEcon"]/div/div[1]/div[3]/div[1]/div[@class="make_flex spaceBetween"]/div[@class="faresRightSection"]/div[@class="make_relative"]/button[.=" Book Now "]')}
 
 
     get loginBtn() { return $('//li[@class="makeFlex hrtlCenter font10 makeRelative lhUser"]') }
