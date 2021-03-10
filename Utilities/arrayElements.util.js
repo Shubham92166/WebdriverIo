@@ -1,9 +1,8 @@
-const isPresentInAllTheElementText = (listOfElements,partialText) =>{​​​​​
-    let ifAllElmentsContainsText  = true;
+const isPresentInAllTheElementText = (listOfElements, partialText) =>{​​​​​
     for(let text of listOfElements.map(elem=>elem.getText())){​​​​​
-    ifAllElmentsContainsText = text.includes(partialText)
-        }​​​​​
-    returnifAllElmentsContainsText
+        if (text.includes(partialText)) return true;
     }​​​​​
+    return false
+}​​​​​
 
 module.exports = {isPresentInAllTheElementText}    
